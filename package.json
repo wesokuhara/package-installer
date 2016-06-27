@@ -1,0 +1,22 @@
+{
+  "name": "ps-package-installer",
+  "version": "1.0.0",
+  "description": "Coding exercise applying Topological sorting",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesokuhara/package-installer.git"
+  },
+  "author": "Wes Okuhara",
+  "bugs": {
+    "url": "https://github.com/wesokuhara/package-installer/issues"
+  }
+}
