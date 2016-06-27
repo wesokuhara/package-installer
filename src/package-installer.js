@@ -19,8 +19,8 @@ var PackageInstaller = function() {
     for (var i = 0; i < this.installOrder.length; i ++) {
       order += this.installOrder[i] + '. '
     }
-
-    console.log(order);
+    
+    return order;
   }
 
   // Reset fields of the Package Installer
@@ -49,7 +49,7 @@ var PackageInstaller = function() {
     }
   }
 
-  // Depth First Search
+  // Depth First Search applying Topological storing
   this.dfs = function() {
     for (var packageName in this.packages) {
       var currentPackage = this.packages[packageName];
