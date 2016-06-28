@@ -5,8 +5,8 @@ var PackageInstaller = function() {
   this.installOrder = [];
   this.containsCycle = false;
 
-  // Prints the order to install packages
-  this.printInstallOrder = function(relationships) {
+  // get the array of the order to install packages
+  this.getInstallOrder = function(relationships) {
     this.reset();
     this.buildPackages(relationships);
     this.dfs();
@@ -15,12 +15,7 @@ var PackageInstaller = function() {
       throw "ERROR: There exists a cycle in the dependencies.";
     }
 
-    var order = '';
-    for (var i = 0; i < this.installOrder.length; i ++) {
-      order += this.installOrder[i] + '. '
-    }
-    
-    return order;
+    return this.installOrder;
   }
 
   // Reset fields of the Package Installer
