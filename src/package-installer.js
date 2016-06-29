@@ -5,7 +5,7 @@ var PackageInstaller = function() {
   this.installOrder = [];
   this.containsCycle = false;
 
-  // get the array of the order to install packages
+  // Get the ordered array of packages to install
   this.getInstallOrder = function(relationships) {
     this.reset();
     this.buildPackages(relationships);
