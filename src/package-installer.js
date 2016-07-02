@@ -19,7 +19,7 @@ var PackageInstaller = function() {
   }
 
   // Reset fields of the Package Installer
-  this.reset = function () {
+  this.reset = function() {
     this.packages = {};
     this.installOrder = [];
     this.containsCycle = false;

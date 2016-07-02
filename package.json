@@ -1,7 +1,7 @@
 {
   "name": "ps-package-installer",
   "version": "1.0.0",
-  "description": "Coding exercise applying Topological sorting",
+  "description": "A coding exercise applying Topological sorting",
   "directories": {
     "test": "test"
   },
