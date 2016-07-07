@@ -1,8 +1,12 @@
-var Package = function() {
-  this.name = '';
-  this.dependencyName = '';
-  this.visited = false;
-  this.done = false;
+'use strict'
+
+class Package {
+  constructor(name, dependencyName) {
+    this.name = name
+    this.dependencyName = dependencyName
+    this.visited = false
+    this.done = false
+  }
 }
 
-module.exports = Package;
+module.exports = Package
