@@ -1,15 +1,17 @@
 {
-  "name": "ps-package-installer",
+  "name": "package-installer",
   "version": "1.0.0",
   "description": "A coding exercise applying Topological sorting",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "chai": "^3.5.0"
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "nodemon": "^1.10.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "watch-test": "nodemon --exec 'npm test' --watch test"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,12 @@
   "author": "Wes Okuhara",
   "bugs": {
     "url": "https://github.com/wesokuhara/package-installer/issues"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "it"
+    ]
   }
 }

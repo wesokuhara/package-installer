@@ -14,7 +14,7 @@ describe('Package Installer', () => {
     })
 
     it('should work for larger amount of packages ', () => {
-      let testInput = ['KittenService: ','Leetmeme: Cyberportal','Cyberportal: Ice','CamelCaser: KittenService','Fraudstream: Leetmeme','Ice: ']
+      let testInput = ['KittenService: ', 'Leetmeme: Cyberportal', 'Cyberportal: Ice', 'CamelCaser: KittenService', 'Fraudstream: Leetmeme', 'Ice: ']
       let actual = installer.getInstallOrder(testInput)
       let expected = ['KittenService', 'Ice', 'Cyberportal', 'Leetmeme', 'CamelCaser', 'Fraudstream']
 
@@ -24,7 +24,7 @@ describe('Package Installer', () => {
 
   context('Error cases', () => {
     it('should throw an error if there is a cycle in the dependencies', () => {
-      let testInput = ['KittenService: ','Leetmeme: Cyberportal','Cyberportal: Ice','CamelCaser: KittenService','Fraudstream: ','Ice: Leetmeme']
+      let testInput = ['KittenService: ', 'Leetmeme: Cyberportal', 'Cyberportal: Ice', 'CamelCaser: KittenService', 'Fraudstream: ', 'Ice: Leetmeme']
 
       assert.throws(() => {
         installer.getInstallOrder(testInput)
@@ -32,7 +32,7 @@ describe('Package Installer', () => {
     })
 
     it('should throw an error if there is a dependency package that does not exist', () => {
-      let testInput = ['KittenService: Ghost','Leetmeme: Cyberportal','Cyberportal: Ice','CamelCaser: KittenService','Fraudstream: ','Ice: Leetmeme']
+      let testInput = ['KittenService: Ghost', 'Leetmeme: Cyberportal', 'Cyberportal: Ice', 'CamelCaser: KittenService', 'Fraudstream: ', 'Ice: Leetmeme']
 
       assert.throws(() => {
         installer.getInstallOrder(testInput)
